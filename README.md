@@ -1,5 +1,5 @@
 # ТВ плеер на твой компьютер
-# СКАЧАТЬ ПЛЕЕР без libvlc (only x64) 👉 [![GitHub branch checks state](https://img.shields.io/github/checks-status/Jeka345/Tv-On-You-Android/main_str)][release-ssl]
+# СКАЧАТЬ ПЛЕЕР без libvlc (only x64) 👉 [![GitHub branch checks state](https://img.shields.io/github/checks-status/Jeka345/cmliveplayerlivetv/master)][release-ssl]
 
 Данный плеер предназначен для просмотра IPTV каналов на базе Windows из основного:
 - Совместимость с Windows Vista+
