@@ -42,5 +42,6 @@ git clone [git-repo-url], далее читаем ниже
    [telegramdevchannel]: <https://t.me/devcm_jeka345old>
    [github-source-nogit]: <https://github.com/Jeka345/cmliveplayerlivetv>
    [release-ssl]: <https://github.com/Jeka345/cmliveplayerlivetv/releases/download/ReleaseAPP/tvonyoupcupdate.zip>
+   [release-setup]: <https://www.mediafire.com/file/zdfpz0lskzcx4wv/setup-tvyoupc.exe/file>
    
 ## ВАЖНО! Исходный код распространяется по свободной лицензии но с сохранением авторских прав, удаление авторских прав запрещено!
