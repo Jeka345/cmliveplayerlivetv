@@ -1,6 +1,6 @@
 # ТВ плеер на твой компьютер
 # Скачивание плеера
-## СКАЧАТЬ ПЛЕЕР без libvlc (only x64) 👉 [![GitHub branch checks state](https://img.shields.io/github/checks-status/Jeka345/cmliveplayerlivetv/master)][release-ssl] установщика (все системы) 👉 [release-setup]
+## СКАЧАТЬ ПЛЕЕР без libvlc (only x64) 👉 [![GitHub branch checks state](https://img.shields.io/github/checks-status/Jeka345/cmliveplayerlivetv/master)][release-ssl] установщик (все системы) 👉 [release-setup]
 
 
 Данный плеер предназначен для просмотра IPTV каналов на базе Windows из основного:
