@@ -1,0 +1,36 @@
+﻿<mah:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    x:Name="MainForm" x:Class="cmliveplayerlivetv.Settings"
+                 mc:Ignorable="d"
+        Title="Настройки программы" TitleAlignment="Center" Height="360" Width="644" Icon="iptvicon.png" ResizeMode="CanMinimize">
+    <Grid>
+        <mah:MetroAnimatedTabControl x:Name="Settings_Select">
+            <TabItem Header="Основные настройки">
+                <StackPanel x:Name="stk">
+                    <mah:MetroHeader Header="Внешний плеер" Height="31" AutomationProperties.IsOffscreenBehavior="Default" InputScope="Default" mah:HeaderedControlHelper.HeaderFontSize="22" mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center"/>
+                    <mah:ToggleSwitch x:Name="vlctoogle" Content="VLC" Toggled="SourceVLC" FontSize="20" FontWeight="Normal"/>
+                    <TextBox x:Name="vlcsource" Visibility="Hidden" ToolTip="Полный путь до видеоплеера VLC" Height="auto" Width="auto" TextAlignment="Center"/>
+                    <Button x:Name="vlccomp" Content="Применить настройку" Height="auto" Width="auto" Click="outplayerset" FontSize="14" FontWeight="Normal" />
+                </StackPanel>
+            </TabItem>
+            <TabItem  Header="Дополнительные настройки">
+                <StackPanel x:Name="set1">
+                    <mah:MetroHeader Height="31" FontSize="22" Header="Настройки программы" mah:HeaderedControlHelper.HeaderFontSize="22" mah:HeaderedControlHelper.HeaderFontWeight="Regular" mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center"/>
+                    <mah:ToggleSwitch x:Name="toogleplus" Content="Использовать плюсовые каналы" FontSize="18"/>
+                    <mah:ToggleSwitch x:Name="toogleminsound" Content="Использовать минимальную громкость плеера по умолчанию" FontSize="18"/>
+                    <mah:ToggleSwitch x:Name="toogleoutplayer" Content="Использовать внешний плеер по умолчанию" FontSize="18" ToolTip="Используйте только если вы его указали на вкладе Основные настройки"/>
+                    <StackPanel>
+                        <Button Content="Отключить выбранные функциии" FontSize="14" FontWeight="Normal" Click="Settings_NotOk" Width="246" HorizontalAlignment="Left"/>
+                        <Button Content="Включить выбранные функции" FontSize="14" FontWeight="Normal" Click="SettingsApen_Ok" Width="250" HorizontalAlignment="Right" Margin="0,-35,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </mah:MetroAnimatedTabControl>
+        <!--  <TextBox Name="vlcsource" Visibility="Hidden" ToolTip="Полный путь до видеоплеера VLC" Margin="10,101,10,199"></TextBox> -->
+    </Grid>
+</mah:MetroWindow>
