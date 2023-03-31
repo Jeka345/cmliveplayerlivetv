@@ -15,6 +15,7 @@ using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Newtonsoft.Json;
+using Microsoft.Win32;
 
 namespace cmliveplayerlivetv
 {
@@ -94,11 +95,20 @@ namespace cmliveplayerlivetv
                 {
                     File_load.Attributes = FileAttributes.Normal;
                     MessageBox.Show("Папка libvlc не найдена, программа работает в ограниченном режиме!\nВнимание! если у вас Windows x32 битная\nТо вам необходима данная папка, по другому программа не работает!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    INI.Write("settings", "outplayer", "yes");
-                    INI.Write("player", "directory", @"C:\Program Files\VideoLAN\VLC");
-                    INI.Write("player", "runing", "vlc.exe");
-                    Process.Start(Application.ResourceAssembly.Location);
-                    Application.Current.Shutdown();
+                    if(INI.KeyExists("directory", "player") & INI.KeyExists("runing", "player") & INI.KeyExists("outplayer", "settings"))
+                    {
+
+                    }
+                    else
+                    {
+                        string installdir;
+                        installdir = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\VideoLAN\VLC", "InstallDir", null);
+                        INI.Write("settings", "outplayer", "yes");
+                        INI.Write("player", "directory", installdir);
+                        INI.Write("player", "runing", "vlc.exe");
+                        Process.Start(Application.ResourceAssembly.Location);
+                        Application.Current.Shutdown();
+                    }
                 }
             }
             if ((INI.ReadINI("settings", "minsound") == "yes"))
